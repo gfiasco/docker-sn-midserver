@@ -30,7 +30,7 @@ version: '3'
 services:
   midserver:
     container_name: sn-midserver
-    image: gfiasco/sn-midserver/sn-midserver:kingston
+    image: gfiasco/sn-midserver:kingston
     network_mode: host
     environment:
       - SN_URL=https://dev00000.service-now.com
