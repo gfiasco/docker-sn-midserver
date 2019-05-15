@@ -1,7 +1,5 @@
 FROM debian:9
 
-LABEL maintainer="andrekosak@icloud.com"
-
 # To get rid of error messages like "debconf: unable to initialize frontend: Dialog":
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
@@ -26,7 +24,7 @@ RUN wget --no-check-certificate \
     chmod 755 /opt/fill-config-parameter && \
     rm -rf /tmp/*
 
-EXPOSE 80 443
+#EXPOSE 80 443
 
 ENTRYPOINT ["/opt/init"]
 
